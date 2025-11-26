@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Download, Home, User, Briefcase, Mail } from 'lucide-react';
+import { Eye, Home, User, Briefcase, Mail } from 'lucide-react';
 
 export default function Navigation({ activeSection, setActiveSection }) {
   const [scrolled, setScrolled] = useState(false);
@@ -31,6 +31,7 @@ export default function Navigation({ activeSection, setActiveSection }) {
     { id: 'projects', label: 'Projects', icon: <Briefcase size={20} /> },
     { id: 'contact', label: 'Contact', icon: <Mail size={20} /> },
   ];
+
   return (
     <nav className={`fixed top-0 w-full ${scrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'} transition-all duration-300 z-50 border-b border-purple-500/30`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,30 +55,32 @@ export default function Navigation({ activeSection, setActiveSection }) {
                     : 'text-gray-300 hover:text-white hover:bg-gray-700/30'
                 }`}
               >
-                <span className="hidden sm:inline">{item.icon}</span>
-                {item.label}
+                {item.icon}
+                <span>{item.label}</span>
               </button>
             ))}
           </div>
           
           <a
-            href="/resume.pdf"
-            download="Priyanshu_Singh_CV.pdf"
+            href="/resume/Priyanshu.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 px-6 py-2.5 rounded-full text-sm font-semibold transition-all transform hover:scale-105 shadow-lg border border-gray-600"
           >
-            <Download size={18} />
-            <span className="hidden sm:inline">Download CV</span>
+            <Eye size={18} />
+            <span className="hidden sm:inline">View Resume</span>
           </a>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <a
-              href="/resume.pdf"
-              download="Priyanshu_Singh_CV.pdf"
+              href="/resume/Priyanshu.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 px-3 py-2 rounded-full text-sm font-semibold transition-all transform hover:scale-105 mr-3 border border-gray-600"
             >
-              <Download size={16} />
-              <span className="sr-only">Download CV</span>
+              <Eye size={16} />
+              <span className="ml-2">View Resume</span>
             </a>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -121,12 +124,13 @@ export default function Navigation({ activeSection, setActiveSection }) {
             </button>
           ))}
           <a
-            href="/resume.pdf"
-            download="Priyanshu_Singh_CV.pdf"
+            href="/resume/Priyanshu.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:bg-gray-700/30 hover:text-white"
           >
-            <Download size={20} />
-            Download CV
+            <Eye size={20} />
+            <span>View Resume</span>
           </a>
         </div>
       </div>
