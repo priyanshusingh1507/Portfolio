@@ -16,12 +16,6 @@ const ProjectsSection = () => {
       link: "https://atorix.vercel.app/"
     },
     {
-      title: "GitHub Profile",
-      description: "Explore my open-source contributions, projects, and coding journey across various technologies.",
-      tech: ["Open Source", "Git", "Collaboration"],
-      link: "https://github.com/priyanshusingh1507"
-    },
-    {
       title: "ConnectingDotsERP",
       description: "Enhanced modules and developed scalable features for an open-source enterprise platform using modern web technologies.",
       tech: ["Open Source", "ERP Systems", "JavaScript/TypeScript", "Node.js", "MongoDB"],
@@ -38,8 +32,16 @@ const ProjectsSection = () => {
       description: "A showcase of my developer journey featuring open-source contributions, full-stack experiments, performance-focused builds, and hands-on learning across modern web technologies. This portfolio reflects my approach to clean coding, scalable architecture, and continuous improvement.",
       tech: ["Full-Stack Development", "Open Source", "JavaScript/TypeScript", "Node.js", "MongoDB", "Git", "Web Performance", "Clean Code"],
       link: "https://portfolio-three-ivory-31.vercel.app/"
+     },
 
-    }
+     {
+      title: "3D Portfolio",
+      description: "A visually rich 3D portfolio website created using Three.js to present my projects, skills, and professional profile with interactive animations and smooth user experience.",
+      tech: ["Full-Stack Development", "Open Source", "JavaScript/TypeScript", "Node.js", "MongoDB", "Git", "Web Performance", "Clean Code"],
+      link: "https://three-js.vercel.app/"
+
+     }
+
   ];
 
   return (
