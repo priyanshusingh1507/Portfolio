@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       title: "3D Portfolio",
       description: "A visually rich 3D portfolio website created using Three.js to present my projects, skills, and professional profile with interactive animations and smooth user experience.",
       tech: ["Full-Stack Development", "Open Source", "JavaScript/TypeScript", "Node.js", "MongoDB", "Git", "Web Performance", "Clean Code"],
-      link: "https://three-js.vercel.app/"
+      link: "https://three-js-1-seven.vercel.app/"
 
      }
 
