@@ -13,7 +13,7 @@ const ProjectsSection = () => {
       title: "Atorix",
       description: "A modern web application showcasing full-stack development with responsive design and seamless user experience.",
       tech: ["React", "Next.js", "Tailwind CSS", "MongoDB"],
-      link: "https://atorix.vercel.app/"
+      link: "https://www.atorixit.com//"
     },
     {
       title: "ConnectingDotsERP",
