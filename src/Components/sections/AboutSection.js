@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { User, Briefcase, MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const AboutSection = ({ skills = [] }) => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (date) => {
+    return date.toLocaleTimeString('en-US', {
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+  };
+
   const infoCards = [
     {
       icon: <Briefcase size={20} />,
@@ -16,7 +35,7 @@ const AboutSection = ({ skills = [] }) => {
     {
       icon: <Clock size={20} />,
       label: 'Time',
-      value: '14:08 // same time'
+      value: formatTime(currentTime)
     },
     {
       icon: <Phone size={20} />,
